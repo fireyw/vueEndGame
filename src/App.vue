@@ -14,7 +14,7 @@ export default {
     HelloWorld,
   },
   created() {
-    var a=1010;
+    var a=100;
   }
 };
 </script>
