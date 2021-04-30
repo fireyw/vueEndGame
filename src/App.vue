@@ -11,10 +11,11 @@ import HelloWorld from "./components/HelloWorld.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HelloWorld
   },
   created() {
-    var a=1000;
+    console.log("test");
+    var a = 1000;
   }
 };
 </script>

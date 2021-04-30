@@ -8,8 +8,24 @@ module.exports = {
     parser: "babel-eslint",
   },
   rules: {
+    // "no-console": "error"
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    //별도에 파일로 빼지 않고 eslint에서 보통 같이 관리함
+    'prettier/prettier': [
+      'error',
+      // 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
+      // https://prettier.io/docs/en/options.html
+      {
+        singleQuote: true,
+        semi: true,
+        useTabs: true,
+        tabWidth: 2,
+        trailingComma: 'all',
+        printWidth: 80,
+        bracketSpacing: true,
+        arrowParens: 'avoid',
+      }]
   },
   overrides: [
     {
